@@ -1,16 +1,17 @@
+// const ADMIN = 0;
+// const READ_ONLY = 1;
+// const AUTHOR = 2;
+
+enum Role { ADMIN, READ_ONLY, AUTHOR };
+
 // Looks like an object but this is an "object type"
-const person = {
+const person ={
   name: 'max',
   age: 30,
   hobbies: ['Sports', 'Cooking'],
-  role: [2, 'author']
+  role: Role.ADMIN
 };
 
-// An array with any can hold multiple values
-let things: any[] = ['Sports', 1, true]
-
-// With an array of strings, TS can detect methods that are used for specific data types
-for (const hobby of person.hobbies) {
-  // TS knows a hobby in this example is a string, so toUpperCase works here and doesn't throw an error
-  console.log(hobby.toUpperCase())
+if (person.role === Role.AUTHOR) {
+  console.log('is author');
 }
