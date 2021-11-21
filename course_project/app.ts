@@ -2,7 +2,8 @@
 const person = {
   name: 'max',
   age: 30,
-  hobbies: ['Sports', 'Cooking']
+  hobbies: ['Sports', 'Cooking'],
+  role: [2, 'author']
 };
 
 // An array with any can hold multiple values
