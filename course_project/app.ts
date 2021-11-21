@@ -1,19 +1,15 @@
 // Looks like an object but this is an "object type"
 const person = {
   name: 'max',
-  age: 30
+  age: 30,
+  hobbies: ['Sports', 'Cooking']
 };
 
-// This is the actual type of object
-// const person1: object = {
-//   name: 'person',
-//   age: '30'
-// }
+// An array with any can hold multiple values
+let things: any[] = ['Sports', 1, true]
 
-const person1: {name: string; age: number;} = {
-  name: 'person',
-  age: 30
+// With an array of strings, TS can detect methods that are used for specific data types
+for (const hobby of person.hobbies) {
+  // TS knows a hobby in this example is a string, so toUpperCase works here and doesn't throw an error
+  console.log(hobby.toUpperCase())
 }
-
-// nickname doesn't exist on the person object type
-// console.log(person.nickname)
