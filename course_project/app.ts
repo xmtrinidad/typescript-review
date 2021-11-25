@@ -1,17 +1,12 @@
-// const ADMIN = 0;
-// const READ_ONLY = 1;
-// const AUTHOR = 2;
-
-enum Role { ADMIN, READ_ONLY, AUTHOR };
-
-// Looks like an object but this is an "object type"
-const person ={
-  name: 'max',
-  age: 30,
-  hobbies: ['Sports', 'Cooking'],
-  role: Role.ADMIN
-};
-
-if (person.role === Role.AUTHOR) {
-  console.log('is author');
+function combine(input1: number | string, input2: number | string) {
+  let result;
+  if (typeof input1 === 'number' && typeof input2 === 'number') {
+    result = input1 + input2;
+  }
+  return result;
 }
+
+const combinedAges = combine(30, 26);
+console.log(combinedAges);
+
+const combinedNames = combine('bruh', 'bro')
