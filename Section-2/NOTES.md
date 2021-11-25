@@ -26,3 +26,11 @@ function combine(input1: number | string, input2: number | string, resultConvers
 
 ```typescript
 type Combinable = number | string
+```
+
+## Functions as Types
+
+Example:
+```typescript
+let combineValues: (a: number, b: number) => number;
+```
