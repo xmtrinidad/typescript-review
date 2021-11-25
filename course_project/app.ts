@@ -1,15 +1,16 @@
-function add(n1: number, n2: number) {
-  return n1 + n2;
+let userInput: unknown;
+let userName: string;
+
+userInput = 5;
+userInput = 'Thing';
+
+if (typeof userInput === 'string') {
+  userName = userInput;
 }
 
-function printResult(num: number) {
-  console.log('Result: ' + num);
+// This techincally has a type of "never" as in never returns anything
+function generateError(message: string, code: number) {
+  throw { message: message, errorCode: code}
 }
 
-printResult(add(5, 12));
-
-let combineValues: (a: number, b: number) => number;
-
-combineValues = add;
-
-console.log(combineValues(8, 8));
+generateError('An error occured!', 500);

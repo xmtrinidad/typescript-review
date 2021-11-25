@@ -34,3 +34,23 @@ Example:
 ```typescript
 let combineValues: (a: number, b: number) => number;
 ```
+
+## Unknown Type
+
+Similar to the any type, but more restrictive
+
+```typescript
+if (typeof userInput === 'string') {
+  let userInput: unknown;
+  let userName: string;
+
+  userInput = 5;
+  userInput = 'Thing';
+
+  if (typeof userInput === 'string') {
+    userName = userInput;
+  }
+}
+```
+
+## Never Type
