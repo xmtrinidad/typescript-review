@@ -28,4 +28,20 @@ In the ```tsconfig.json``` file that was generated from the tsc --init command, 
 ]
 ```
 
-## Setting a compilation target
+## Compilation Options
+
+The ```lib``` setting is how TypeScript knows about a lot of the JavaScript defaults and how to manipulate the DOM if necessary:
+
+```json
+// Default es6 settings
+"lib": [
+  "dom",
+  "es6",
+  "dom.iterable",
+  "scripthost"
+]
+```
+
+```outDir``` can be used to place compiled JavaScript files into a dist folder, for example.
+
+```rootDir``` helps with organizing TS files by telling the compiler which folder to watch TS files in
