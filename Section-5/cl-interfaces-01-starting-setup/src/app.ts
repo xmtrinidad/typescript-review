@@ -88,3 +88,23 @@ console.log(accounting.mostRecentReport);
 
 accounting.mostRecentReport = 'Test thing';
 accounting.addReport('Something went wrong...');
+
+/**
+ * INTERFACE STUFF
+ */
+
+interface Person {
+  name: string;
+  age: number;
+  greet(phrase: string): void
+}
+
+let user1: Person;
+
+user1 = {
+  name: 'Dude Bro',
+  age: 2,
+  greet(phrase: string) {
+    console.log(phrase + ' ' + this.name)
+  }
+}
