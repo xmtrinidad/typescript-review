@@ -36,5 +36,16 @@ class Person implements Greetable {
 }
 ```
 
+## Readonly Interface Properties
+
+```public``` and ```private``` can't be used on interfaces but ```readonly``` can be used to make it clear that a property can't be changed
+
+```typescript
+interface Greetable {
+  readonly name: string;
+  greet(phrase: string): void;
+}
+```
+
 
 

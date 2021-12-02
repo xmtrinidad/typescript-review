@@ -99,24 +99,17 @@ interface Person {
   greet(phrase: string): void
 }
 
-let user1: Person;
-
-user1 = {
-  name: 'Dude Bro',
-  age: 2,
-  greet(phrase: string) {
-    console.log(phrase + ' ' + this.name)
-  }
+interface Named {
+  readonly name: string;
 }
 
-interface Greetable {
-  name: string;
+interface Greetable extends Named {
   greet(phrase: string): void;
 }
 
 // Tell TypeScript this class should adhere to the Greetable interface
 class Person implements Greetable {
-  name: string;
+  // name: string;
   
   constructor(n: string) {
     this.name = n;
@@ -126,3 +119,7 @@ class Person implements Greetable {
     console.log(phrase + ' ' + this.name)
   }
 }
+
+let user1: Greetable;
+
+user1 = new Person('Xavier');
