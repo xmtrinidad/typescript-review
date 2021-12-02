@@ -93,14 +93,15 @@ accounting.addReport('Something went wrong...');
  * INTERFACE STUFF
  */
 
-interface Person {
-  name: string;
-  age: number;
-  greet(phrase: string): void
-}
+// interface Person {
+//   name: string;
+//   age: number;
+//   greet(phrase: string): void
+// }
 
 interface Named {
-  readonly name: string;
+  // readonly name: string;
+  outputName?: string;
 }
 
 interface Greetable extends Named {
@@ -111,10 +112,13 @@ interface Greetable extends Named {
 
 // Tell TypeScript this class should adhere to the Greetable interface
 class Person implements Greetable {
-  // name: string;
+  name?: string;
   
   constructor(n: string) {
-    this.name = n;
+    if (n) {
+      this.name = n;
+    }
+    
   }
 
   greet(phrase: string) {
