@@ -108,3 +108,21 @@ user1 = {
     console.log(phrase + ' ' + this.name)
   }
 }
+
+interface Greetable {
+  name: string;
+  greet(phrase: string): void;
+}
+
+// Tell TypeScript this class should adhere to the Greetable interface
+class Person implements Greetable {
+  name: string;
+  
+  constructor(n: string) {
+    this.name = n;
+  }
+
+  greet(phrase: string) {
+    console.log(phrase + ' ' + this.name)
+  }
+}
