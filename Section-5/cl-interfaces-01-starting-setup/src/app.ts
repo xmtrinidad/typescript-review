@@ -107,6 +107,8 @@ interface Greetable extends Named {
   greet(phrase: string): void;
 }
 
+
+
 // Tell TypeScript this class should adhere to the Greetable interface
 class Person implements Greetable {
   // name: string;
@@ -123,3 +125,13 @@ class Person implements Greetable {
 let user1: Greetable;
 
 user1 = new Person('Xavier');
+
+// Interface function example
+interface AddFn {
+  (a: number, b: number): number;
+}
+
+let add: AddFn;
+add = (n1: number, n2: number) {
+  return n1 + n2;
+}
