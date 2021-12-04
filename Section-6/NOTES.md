@@ -98,3 +98,17 @@ function moveAnimal(animal: Animal) {
   console.log('Moving at speed: ' + speed);
 }
 ```
+
+## Index Properties
+
+Used to make types more flexible, without providing specific prop names
+
+```typescript
+interface ErrorContainer {
+  [prop: string]: string;
+}
+
+const errors: ErrorContainer = {
+  email: 'Not a valid email'
+}
+```
