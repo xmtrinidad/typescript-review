@@ -97,4 +97,14 @@ function moveAnimal(animal: Animal) {
   console.log('Moving at speed: ' + speed);
 }
 
-moveAnimal({type: 'bird', flyingSpeed: 10})
+moveAnimal({type: 'bird', flyingSpeed: 10});
+
+// const userInputElement = document.getElementById('user-input')!;
+// userInputElement.value = 'Test'; // error because TS doesn't know what type of element the input is
+
+// <> to type cast
+// const userInputElement = <HTMLInputElement>document.getElementById('user-input')!;
+// userInputElement.value = 'Test';
+
+const userInputElement = document.getElementById('user-input')! as HTMLInputElement;
+userInputElement.value = 'Test';
